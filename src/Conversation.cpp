@@ -418,7 +418,7 @@ char *Conversation::stripHTML(const char *str) const
                 std::strncmp(str2 + href_st, href + 7, hrlen - 7) != 0)) {
             str2[j++] = ' ';
             str2[j++] = '(';
-            g_memmove(str2 + j, href, hrlen);
+            memmove(str2 + j, href, hrlen);
             j += hrlen;
             str2[j++] = ')';
             g_free(href);
